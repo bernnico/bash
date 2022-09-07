@@ -5,7 +5,8 @@ stty -F /dev/ttymxc0 speed
 # 115200
 
 # init & config
-stty -F /dev/ttymxc2 115200
+stty -F /dev/ttymxc0 115200
+stty -F /dev/ttymxc0 raw -echo -echoe -echok
 
 # write
 echo "HELLO" > /dev/ttymxc0
